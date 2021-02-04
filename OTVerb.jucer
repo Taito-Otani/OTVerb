@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<JUCERPROJECT id="VjvI09" name="OTVerb" projectType="audioplug" useAppConfig="0"
+              addUsingNamespaceToJuceHeader="0" displaySplashScreen="1" jucerFormatVersion="1"
+              companyName="NINETEEN95 STUDIO" companyEmail="nineteen95studio@gmail.com"
+              companyWebsite="http://bobobibabo.club/nn95studio.html" bundleIdentifier="jp.co.nineteen95studio.otverb"
+              pluginManufacturer="NINETEEN95STUDIO">
+  <MAINGROUP id="TzjG2A" name="OTVerb">
+    <GROUP id="{013B9659-F2BB-D06C-4927-20EF8F1FCBF1}" name="Source">
+      <FILE id="mHbAD3" name="PluginProcessor.cpp" compile="1" resource="0"
+            file="Source/PluginProcessor.cpp"/>
+      <FILE id="LrsKKd" name="PluginProcessor.h" compile="0" resource="0"
+            file="Source/PluginProcessor.h"/>
+      <FILE id="iQpKhU" name="PluginEditor.cpp" compile="1" resource="0"
+            file="Source/PluginEditor.cpp"/>
+      <FILE id="XyQsaM" name="PluginEditor.h" compile="0" resource="0" file="Source/PluginEditor.h"/>
+    </GROUP>
+    <GROUP id="{65C3BB4C-9018-DB52-C23C-2649C9B4F533}" name="gen_exported">
+      <GROUP id="{59E8E6B4-4154-5BD5-B7F6-909A13DDE180}" name="gen_dsp">
+        <FILE id="arZuw3" name="genlib.cpp" compile="1" resource="0" file="Source/gen_exported/gen_dsp/genlib.cpp"/>
+        <FILE id="TJCmXo" name="genlib.h" compile="0" resource="0" file="Source/gen_exported/gen_dsp/genlib.h"/>
+        <FILE id="WjT6Uh" name="genlib_common.h" compile="0" resource="0" file="Source/gen_exported/gen_dsp/genlib_common.h"/>
+        <FILE id="v0bgly" name="genlib_common_win.h" compile="0" resource="0"
+              file="Source/gen_exported/gen_dsp/genlib_common_win.h"/>
+        <FILE id="TAZC6W" name="genlib_exportfunctions.h" compile="0" resource="0"
+              file="Source/gen_exported/gen_dsp/genlib_exportfunctions.h"/>
+        <FILE id="hnSWhm" name="genlib_ops.h" compile="0" resource="0" file="Source/gen_exported/gen_dsp/genlib_ops.h"/>
+        <FILE id="jSYqvH" name="genlib_platform.h" compile="0" resource="0"
+              file="Source/gen_exported/gen_dsp/genlib_platform.h"/>
+        <FILE id="wDidwJ" name="json.c" compile="1" resource="0" file="Source/gen_exported/gen_dsp/json.c"/>
+        <FILE id="tdVCr4" name="json.h" compile="0" resource="0" file="Source/gen_exported/gen_dsp/json.h"/>
+        <FILE id="AiCR04" name="json_builder.c" compile="1" resource="0" file="Source/gen_exported/gen_dsp/json_builder.c"/>
+        <FILE id="oUs4fi" name="json_builder.h" compile="0" resource="0" file="Source/gen_exported/gen_dsp/json_builder.h"/>
+      </GROUP>
+      <FILE id="F72uN9" name="gen_exported.cpp" compile="1" resource="0"
+            file="Source/gen_exported/gen_exported.cpp"/>
+      <FILE id="gnFonE" name="gen_exported.h" compile="0" resource="0" file="Source/gen_exported/gen_exported.h"/>
+    </GROUP>
+  </MAINGROUP>
+  <JUCEOPTIONS JUCE_STRICT_REFCOUNTEDPOINTER="1" JUCE_VST3_CAN_REPLACE_VST2="0"/>
+  <EXPORTFORMATS>
+    <XCODE_MAC targetFolder="Builds/MacOSX">
+      <CONFIGURATIONS>
+        <CONFIGURATION isDebug="1" name="Debug" targetName="OTVerb" headerPath="$(PROJECT_DIR)/../../Source/gen_exported&#10;$(PROJECT_DIR)/../../Source/gen_exported/gen_dsp"/>
+        <CONFIGURATION isDebug="0" name="Release" targetName="OTVerb" headerPath="$(PROJECT_DIR)/../../Source/gen_exported&#10;$(PROJECT_DIR)/../../Source/gen_exported/gen_dsp"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_audio_basics" path="../../modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../../modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../../modules"/>
+        <MODULEPATH id="juce_audio_plugin_client" path="../../modules"/>
+        <MODULEPATH id="juce_audio_processors" path="../../modules"/>
+        <MODULEPATH id="juce_audio_utils" path="../../modules"/>
+        <MODULEPATH id="juce_core" path="../../modules"/>
+        <MODULEPATH id="juce_data_structures" path="../../modules"/>
+        <MODULEPATH id="juce_events" path="../../modules"/>
+        <MODULEPATH id="juce_graphics" path="../../modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../../modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../../modules"/>
+      </MODULEPATHS>
+    </XCODE_MAC>
+    <VS2019 targetFolder="Builds/VisualStudio2019">
+      <CONFIGURATIONS>
+        <CONFIGURATION isDebug="1" name="Debug" headerPath="$(ProjectDir)/../../Source/gen_exported&#10;$(ProjectDir)/../../Source/gen_exported/gen_dsp"/>
+        <CONFIGURATION isDebug="0" name="Release" headerPath="$(ProjectDir)/../../Source/gen_exported&#10;$(ProjectDir)/../../Source/gen_exported/gen_dsp"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_gui_extra"/>
+        <MODULEPATH id="juce_gui_basics"/>
+        <MODULEPATH id="juce_graphics"/>
+        <MODULEPATH id="juce_events"/>
+        <MODULEPATH id="juce_data_structures"/>
+        <MODULEPATH id="juce_core"/>
+        <MODULEPATH id="juce_audio_utils"/>
+        <MODULEPATH id="juce_audio_processors"/>
+        <MODULEPATH id="juce_audio_plugin_client"/>
+        <MODULEPATH id="juce_audio_formats"/>
+        <MODULEPATH id="juce_audio_devices"/>
+        <MODULEPATH id="juce_audio_basics"/>
+      </MODULEPATHS>
+    </VS2019>
+  </EXPORTFORMATS>
+  <MODULES>
+    <MODULE id="juce_audio_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_devices" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_formats" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_plugin_client" showAllCode="1" useLocalCopy="0"
+            useGlobalPath="1"/>
+    <MODULE id="juce_audio_processors" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_utils" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_core" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_data_structures" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_events" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_graphics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_extra" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+  </MODULES>
+  <LIVE_SETTINGS>
+    <OSX/>
+  </LIVE_SETTINGS>
+</JUCERPROJECT>
