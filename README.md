@@ -2,11 +2,11 @@
 OTVerb is a dirty Reverb VST plugin.
 I made with cycling Max(gen~) + JUCE(C++).
 
-I aim to make sound for some janre such as shoegaze, dreampop, idm, ambient.
+I aim to make sound for some genre such as shoegaze, dreampop, idm, ambient.
 
 The OTVerb is implemented from Max for live devices.
 
-If you get M4L Devices. you cam get here.
+If you get M4L Devices. you can get here.
 https://nineteen95.stores.jp/items/5fb4bfd8df515904fbfed6c9
 
 
